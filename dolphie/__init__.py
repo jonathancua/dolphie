@@ -1054,7 +1054,7 @@ class Dolphie:
         return hostname
 
     def massage_metrics_data(self):
-        if self.is_mysql_version_at_least("8.0"):
+        if self.is_mysql_version_at_least("8.0") and not self.is_mysql_version_at_least("8.0.28"):
             # If we're using MySQL 8, we need to fetch the checkpoint age from the performance schema if it's not
             # available in global status
             if not self.global_status.get("Innodb_checkpoint_age"):
