@@ -612,7 +612,7 @@ class DolphieApp(App):
         for switch in switches_to_toggle:
             switch.toggle()
 
-        dolphie.check_for_update()
+        # dolphie.check_for_update()
 
         self.worker_fetch_data()
 
